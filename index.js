@@ -33,9 +33,9 @@ const makeCommits = async (n) => {
   await git.add([path]);
   await git.commit(date);
 
-  await new Promise(res => setTimeout(res, 500)); // delay
+  await new Promise(res => setTimeout(res, 5000)); // delay
 
   await makeCommits(n - 1);
 };
 // number of commits
-makeCommits(50);
+makeCommits(5);
